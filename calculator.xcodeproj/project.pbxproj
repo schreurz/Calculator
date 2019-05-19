@@ -12,6 +12,8 @@
 		BA43DF9C2291D95300E5079E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA43DF9B2291D95300E5079E /* Assets.xcassets */; };
 		BA43DF9F2291D95300E5079E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA43DF9D2291D95300E5079E /* Main.storyboard */; };
 		BA43DFAB2291D95300E5079E /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43DFAA2291D95300E5079E /* calculatorTests.swift */; };
+		BA43DFB62291FB8800E5079E /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43DFB52291FB8800E5079E /* Calculator.swift */; };
+		BA43DFB82291FD5800E5079E /* MathOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43DFB72291FD5800E5079E /* MathOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		BA43DFA62291D95300E5079E /* calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA43DFAA2291D95300E5079E /* calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorTests.swift; sourceTree = "<group>"; };
 		BA43DFAC2291D95300E5079E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA43DFB52291FB8800E5079E /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		BA43DFB72291FD5800E5079E /* MathOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				BA43DF9D2291D95300E5079E /* Main.storyboard */,
 				BA43DFA02291D95300E5079E /* Info.plist */,
 				BA43DFA12291D95300E5079E /* calculator.entitlements */,
+				BA43DFB52291FB8800E5079E /* Calculator.swift */,
+				BA43DFB72291FD5800E5079E /* MathOperation.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 			files = (
 				BA43DF9A2291D95200E5079E /* ViewController.swift in Sources */,
 				BA43DF982291D95200E5079E /* AppDelegate.swift in Sources */,
+				BA43DFB62291FB8800E5079E /* Calculator.swift in Sources */,
+				BA43DFB82291FD5800E5079E /* MathOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
