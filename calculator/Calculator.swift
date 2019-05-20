@@ -15,47 +15,54 @@ enum CalculatorState {
 }
 
 class Calculator {
-    private var left:Int
-    private var right:Int
-    private var operation:MathOperation
-    private var state:CalculatorState
+    var left:Int
+    var right:Int
+    var operation:MathOperation
+    var display:String
+    
+    private var state:CalculatorState {
+        didSet {
+            updateDisplay()
+        }
+    }
     
     init() {
-        state = .digitPressed
         left = 0
         right = 0
         operation = .add
+        state = .digitPressed
+        display = "0"
     }
     
     func reset() {
-        state = .digitPressed
         left = 0
         right = 0
         operation = .add
+        state = .digitPressed
     }
     
     func pressDigit(digit:Int) {
         if state == .equalsPressed {
             reset()
         }
-        state = .digitPressed
         right *= 10
         right += digit
+        state = .digitPressed
     }
     
     func pressOperation(operation:MathOperation) {
         if state == .digitPressed {
             left = self.calculate()
         }
-        state = .operationPressed
         right = 0
         self.operation = operation
+        state = .operationPressed
     }
     
     func equals() {
-        state = .equalsPressed
         left = self.calculate()
         right = 0
+        state = .equalsPressed
     }
     
     private func calculate() -> Int {
@@ -74,20 +81,21 @@ class Calculator {
         return res
     }
     
-    func getDisplay() -> String {
-        var output:String
+    func updateDisplay() {
         switch state {
         case .digitPressed:
-            output = String(right)
+            display = String(right)
             break
         case .equalsPressed:
-            output = String(left)
+            display = String(left)
             break
         case .operationPressed:
-            output = String(left)
+            display = String(left)
             break
         }
-        
-        return output
+    }
+    
+    func getDisplay() -> String {
+        return display
     }
 }
