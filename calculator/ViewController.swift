@@ -14,12 +14,12 @@ class ViewController: NSViewController {
     
     func addDigit(digit:Int) {
         calculator.pressDigit(digit: digit)
-        outputField.stringValue = calculator.getDisplay()
+        updateDisplay()
     }
     
     func setOperation(op:MathOperation) {
         calculator.pressOperation(operation: op)
-        outputField.stringValue = calculator.getDisplay()
+        updateDisplay()
     }
     
     func updateDisplay() {
@@ -36,7 +36,7 @@ class ViewController: NSViewController {
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+    
         }
     }
     
